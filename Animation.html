@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .base
+        {
+            width: 300px;
+            height: 300px;
+            margin: -150px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            perspective: 500px;
+        }
+       .content
+       {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: transform 3s;
+        transform-style: preserve-3d;
+       }
+       .content:hover{
+        transform: rotateY(180deg);
+       }
+       #first,#second
+       {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            font-size: 60px;
+            text-align: center;
+            line-height: 5;
+            background-color: brown;
+            color: rgb(43, 226, 70);
+            backface-visibility: hidden;
+       }
+       #second
+       {
+        background: blueviolet;
+        color: brown;
+        transform: rotateY(180deg);
+        
+       }
+       
+    </style>
+</head>
+<body>
+    <h1>CSS: backface-visibility </h1>
+    <div class="base">
+        <div class="content">
+            <div id="first">Shubham</div>
+            <div id="second">Poddar</div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
